@@ -1,4 +1,7 @@
-function isPrime(num) {
+const numbers = [2, 3, 5, 7, 9, 11, 15];
+
+(function() {
+  function isPrime(num) {
     if (num <= 1) return false;
     if (num <= 3) return true;
     if (num % 2 === 0 || num % 3 === 0) return false;
@@ -7,9 +10,10 @@ function isPrime(num) {
     }
     return true;
   }
-  
-  const numbers = [2, 3, 5, 7, 9, 11, 15];
+
   const primeNumbers = numbers.filter(function(num) {
     return isPrime(num);
   });
+
   console.log(primeNumbers);
+})();
